@@ -9,8 +9,7 @@
 # Include library for making GET/POST requests.
 library(httr);
 # Include library for parsing JSON.
-# library(rjson);
-library(jsonlite)
+library(rjson);
 library(kableExtra)
 library(shiny) # for password no echo
 
@@ -29,6 +28,9 @@ getData <- function(query, route) {
 
   # Get the body of POST request.
   txtResp <- content(serverResp, type="text", encoding="UTF-8");
+
+  # DEBUG
+  print(reqURL)
   print(txtResp)
   # Convert txtResp from JSON.
   R_obj <- fromJSON(txtResp);
