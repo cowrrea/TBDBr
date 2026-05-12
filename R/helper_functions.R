@@ -9,7 +9,8 @@
 # Include library for making GET/POST requests.
 library(httr);
 # Include library for parsing JSON.
-library(rjson);
+# library(rjson);
+library(jsonlite)
 library(kableExtra)
 library(shiny) # for password no echo
 
