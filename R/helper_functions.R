@@ -30,7 +30,8 @@ getData <- function(query, route) {
   txtResp <- content(serverResp, type="text", encoding="UTF-8");
 
   # DEBUG
-  print(reqURL)
+  print(route)
+  print(serverResp)
   print(txtResp)
   # Convert txtResp from JSON.
   R_obj <- fromJSON(txtResp);
